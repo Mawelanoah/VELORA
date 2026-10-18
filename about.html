@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Velora Fragrances — Premium perfume store for South Africa.">
+  <title>About Us | Velora Fragrances</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="announcement">
+    <span>Secure checkout available</span>
+    <a href="contact.html">Contact us</a>
+  </div>
+
+  <header class="header">
+    <div class="nav-container">
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">☰</button>
+      <a href="index.html" class="logo">Velora <span>Fragrances</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop All</a>
+        <a href="shop.html?category=men">Men's</a>
+        <a href="shop.html?category=women">Women's</a>
+        <a href="shop.html?category=unisex">Unisex</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-icons">
+        <button class="nav-icon" onclick="openSearch()" aria-label="Search">⌕</button>
+        <button class="nav-icon" onclick="openCart()" aria-label="Cart">
+          🛒
+          <span class="cart-count" style="display:none;">0</span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop All</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <h1>About Velora Fragrances</h1>
+    <p>Our story and commitment to quality</p>
+  </div>
+
+  <section class="section" style="max-width:720px;margin:0 auto;">
+    <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem;">
+      Velora Fragrances was created to bring a refined, trustworthy online fragrance experience to South African shoppers. We believe finding a signature scent should feel considered, elegant and straightforward.
+    </p>
+    <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem;">
+      Our focus is on carefully selected fragrances — clearly distinguished between original designer pieces (once verified) and high-quality inspired alternatives. Transparency matters: we never misrepresent a product.
+    </p>
+    <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem;">
+      This website is currently running with demo product data. Real inventory, pricing, authenticity verification and delivery partners will be confirmed by the business before live trading.
+    </p>
+    <h3 style="margin:2rem 0 1rem;">Our Values</h3>
+    <ul style="color:var(--text-muted);line-height:2;">
+      <li>• Honesty about product origin and type</li>
+      <li>• Secure, transparent checkout when payments go live</li>
+      <li>• Responsive customer support via WhatsApp</li>
+      <li>• Clear policies on delivery and returns</li>
+    </ul>
+    <div class="text-center" style="margin-top:2.5rem;">
+      <a href="shop.html" class="btn btn-primary">Explore Fragrances</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Velora Fragrances. Demo store.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header"><h3>Your Cart</h3><button class="cart-close" onclick="closeCart()">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal"><span>Subtotal</span><strong id="cart-subtotal">R 0</strong></div>
+      <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+    </div>
+  </aside>
+
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-box">
+      <input type="search" id="search-input" placeholder="Search..." oninput="handleSearch(this.value)">
+      <div class="search-results" id="search-results"></div>
+      <button class="btn btn-outline btn-sm" onclick="closeSearch()" style="margin-top:0.75rem;">Close</button>
+    </div>
+  </div>
+
+  <a href="#" class="whatsapp-float" id="whatsapp-btn" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Velora Fragrances — WhatsApp support and enquiries.">
+  <title>Contact | Velora Fragrances</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="announcement">
+    <span>We typically respond on WhatsApp during business hours</span>
+  </div>
+
+  <header class="header">
+    <div class="nav-container">
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">☰</button>
+      <a href="index.html" class="logo">Velora <span>Fragrances</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop All</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="nav-icons">
+        <button class="nav-icon" onclick="openCart()" aria-label="Cart">
+          🛒
+          <span class="cart-count" style="display:none;">0</span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop All</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <h1>Contact Us</h1>
+    <p>We're here to help with product questions and orders</p>
+  </div>
+
+  <section class="section" style="max-width:560px;margin:0 auto;">
+    <div class="why-card" style="text-align:left;margin-bottom:1.5rem;">
+      <h3 style="margin-bottom:0.75rem;">WhatsApp</h3>
+      <p style="color:var(--text-muted);margin-bottom:1rem;">Fastest way to reach us. Share product names or your order reference for quicker assistance.</p>
+      <a href="#" class="btn btn-primary" id="whatsapp-btn">Open WhatsApp Chat</a>
+    </div>
+    <div class="why-card" style="text-align:left;">
+      <h3 style="margin-bottom:0.75rem;">Email</h3>
+      <p style="color:var(--text-muted);">hello@velorafragrances.co.za</p>
+      <p style="color:var(--text-muted);font-size:0.85rem;margin-top:0.5rem;">(Placeholder — replace with your real business email)</p>
+    </div>
+    <p style="text-align:center;color:var(--text-muted);font-size:0.9rem;margin-top:2rem;">
+      Replace <strong>YOUR_WHATSAPP_NUMBER</strong> in the code with your real number (country code, no + or spaces, e.g. 27821234567).
+    </p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Velora Fragrances. Demo store.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header"><h3>Your Cart</h3><button class="cart-close" onclick="closeCart()">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal"><span>Subtotal</span><strong id="cart-subtotal">R 0</strong></div>
+      <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+    </div>
+  </aside>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
